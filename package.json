@@ -1,0 +1,26 @@
+{
+  "name": "ztubot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-n-n/ztuBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-n-n/ztuBot/issues"
+  },
+  "homepage": "https://github.com/s-n-n/ztuBot#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "cheerio": "^1.0.0-rc.12",
+    "moment-timezone": "^0.5.43",
+    "node-telegram-bot-api": "^0.63.0"
+  }
+}
