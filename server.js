@@ -22,7 +22,7 @@ bot.on('message', async (msg) => {
     //     messageId = message.message_id;
     // });
 
-    bot.sendMessage(msg.chat.id, JSON.stringify(msg, null, 2));
+    // bot.sendMessage(msg.chat.id, JSON.stringify(msg, null, 2));
 
     await axios.post(`${apiPoint}/addWord`, data).then(async response => {
         bot.sendMessage(msg.chat.id, 'ok');
