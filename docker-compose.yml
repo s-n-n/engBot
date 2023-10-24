@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  engbot:
+    image: engbot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
