@@ -5,6 +5,7 @@ const token = '6609353588:AAHk8gXzgLj9Q-PQUrMXx-i4-hRxog1vYoA';
 const bot = new TelegramBot(token, { polling: true });
 
 const apiPoint = 'https://eng.snet.pw/api/bot'
+// const apiPoint = 'http://localhost:8080/api/bot'
 const apiToken = 'eN#%6FdEW#%7Gfw2$RFy%gd&rf%s@F4z'
 
 let messageId;
