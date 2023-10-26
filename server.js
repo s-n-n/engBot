@@ -80,7 +80,7 @@ bot.on('message', async (msg) => {
         // bot.sendMessage(msg.chat.id, res_msg, { parse_mode: 'HTML' }).then((message) => {
         //     messageId = message.message_id;
         // });
-        bot.sendMessage(msg.chat.id, res_msg);
+        bot.sendMessage(msg.chat.id, res_msg, { parse_mode: 'HTML' });
         // console.log(JSON.stringify(msg, null, 2));
     }).catch(errors => {
         bot.sendMessage(msg.chat.id, 'error');
