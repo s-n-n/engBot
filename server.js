@@ -30,7 +30,7 @@ bot.on('message', async (msg) => {
     } else {
         const arr = msg.text.split('|')
         data = {
-            username: msg.chat.username,
+            username: msg.from.username,
             date: moment.unix(msg.date).tz(timezone).format('YYYY-MM-DD HH:mm:ss'),
             word: arr[0] ? arr[0].trim() : null,
             translate: arr[1] ? arr[1].trim() : null
