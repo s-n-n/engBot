@@ -28,7 +28,7 @@ bot.on('message', async (msg) => {
             // translate: arr[1] ? arr[1].trim() : null
         }
     } else {
-        const arr = msg.text.split('|')
+        const arr = msg.text.split('\\')
         data = {
             username: msg.from.username,
             date: moment.unix(msg.date).tz(timezone).format('YYYY-MM-DD HH:mm:ss'),
