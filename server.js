@@ -70,7 +70,7 @@ bot.on('message', async (msg) => {
             // bot.sendMessage(msg.chat.id, JSON.stringify(data, null, 2));
             savedAction[msg.chat.username] = data
             res_msg = `already exists. rewrite the word? (y/Y)`;
-            res_msg += `\n<b>${response.data.data.translate}<\b>`;
+            res_msg += `\n${response.data.data.translate}`;
             // res_msg += `\n${JSON.stringify(response.data.data.translate, null, 2)}`;
         } else if(response.data.status === 7) {
             savedAction[msg.chat.username] = null
