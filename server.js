@@ -33,7 +33,8 @@ bot.on('message', async (msg) => {
             username: msg.from.username,
             date: moment.unix(msg.date).tz(timezone).format('YYYY-MM-DD HH:mm:ss'),
             word: arr[0] ? arr[0].trim() : null,
-            translate: arr[1] ? arr[1].trim() : null
+            translate: arr[1] ? arr[1].trim() : null,
+            sentence: arr[2] ? arr[2].trim() : null
         }
     }
 
