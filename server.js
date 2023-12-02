@@ -64,24 +64,22 @@ bot.on('message', async (msg) => {
         } else if(response.data.status === 3) {
             res_msg = `word not found.`
         } else if(response.data.status === 4) {
-            res_msg = `info:`;
-            res_msg += `\n\n`;
             res_msg += `user: ${response.data.data.User.name}\ndate: ${moment(response.data.data.created_at).format('YYYY-MM-DD HH:mm:ss')}\nword: ${response.data.data.word}\ntranslate: ${response.data.data.translate}\nsentence: ${response.data.data.sentence}`;
         } else if(response.data.status === 5) {
-            res_msg = `word added:`;
-            res_msg += `\n\n`;
+            res_msg = `word added!`;
+            res_msg += `\n`;
             res_msg += `user: ${response.data.data.User.name}\ndate: ${moment(response.data.data.created_at).format('YYYY-MM-DD HH:mm:ss')}\nword: ${response.data.data.word}\ntranslate: ${response.data.data.translate}\nsentence: ${response.data.data.sentence}`;
         } else if(response.data.status === 6) {
             // bot.sendMessage(msg.chat.id, JSON.stringify(data, null, 2));
             savedAction[msg.chat.username] = data
             res_msg = `already exists. rewrite the word? (y/Y)`;
-            res_msg += `\n\n`;
+            res_msg += `\n`;
             res_msg += `user: ${response.data.data.User.name}\ndate: ${moment(response.data.data.created_at).format('YYYY-MM-DD HH:mm:ss')}\nword: ${response.data.data.word}\ntranslate: ${response.data.data.translate}\nsentence: ${response.data.data.sentence}`;
             // res_msg += `\n${JSON.stringify(response.data.data.translate, null, 2)}`;
         } else if(response.data.status === 7) {
             savedAction[msg.chat.username] = null
-            res_msg = `word rewritten:`;
-            res_msg += `\n\n`;
+            res_msg = `word rewritten!`;
+            res_msg += `\n`;
             res_msg += `user: ${response.data.data.User.name}\ndate: ${moment(response.data.data.created_at).format('YYYY-MM-DD HH:mm:ss')}\nword: ${response.data.data.word}\ntranslate: ${response.data.data.translate}\nsentence: ${response.data.data.sentence}`;
         } else {
             res_msg = `error.`;
