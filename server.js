@@ -68,7 +68,7 @@ bot.on('message', async (msg) => {
         } else if(response.data.status === 5) {
             res_msg = `word added!`;
             res_msg += `\n`;
-res_msg += `\n${JSON.stringify(response, null, 2)}`;
+            console.log(response);
             res_msg += `user: ${response.data.data.User.name}\ndate: ${moment(response.data.data.created_at).format('YYYY-MM-DD HH:mm:ss')}\nword: ${response.data.data.word}\ntranslate: ${response.data.data.translate}\nsentence: ${response.data.data.sentence}`;
         } else if(response.data.status === 6) {
             // bot.sendMessage(msg.chat.id, JSON.stringify(data, null, 2));
