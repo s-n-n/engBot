@@ -64,7 +64,7 @@ bot.on('message', async (msg) => {
         } else if(response.data.status === 3) {
             res_msg = `word not found.`
         } else if(response.data.status === 4) {
-            res_msg = `user: ${response.data.data.User.name}\ndate: ${moment(response.data.data.created_at).format('YYYY-MM-DD HH:mm:ss')}\nword: ${response.data.data.word}\ntranslate: ${response.data.data.translate}`;
+            res_msg = `user: ${response.data.data.User.name}\ndate: ${moment(response.data.data.created_at).format('YYYY-MM-DD HH:mm:ss')}\nword: ${response.data.data.word}\ntranslate: ${response.data.data.translate}\nsentence: ${response.data.data.sentence}`;
         } else if(response.data.status === 5) {
             res_msg = `word added.`;
         } else if(response.data.status === 6) {
